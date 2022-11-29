@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	controller "github.com/iamtejasmane/go-jwt-gin-gonic/controllers"
-	_ "github.com/iamtejasmane/go-jwt-gin-gonic/middlware"
+	"github.com/iamtejasmane/go-jwt-gin-gonic/middleware"
 )
 
 func UserRoutes(incomingRoutes *gin.Engine) {
