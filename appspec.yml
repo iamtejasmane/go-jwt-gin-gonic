@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/go-app
+hooks:
+  ApplicationStop:
+  - location: scripts/stop-app.sh
+    timeout: 300
+    runas: ubuntu
+  BeforeInstall:
+  - location: scripts/install-go.sh
+    timeout: 300
+    runas: ubuntu
+  ApplicationStart:
+  - location: scripts/run-app.sh
+    timeout: 300
+    runas: ubuntu
+  ValidateScript:
+  - location: scripts/validate-script.sh
+    timeout: 300
+    runas: ubuntu
