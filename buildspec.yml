@@ -6,5 +6,5 @@ phases:
        - go build
 artifacts:
   files:
-    - '*/**' 
+    - 'go-jwt-gin-gonic/**/*' 
   base-directory: go-jwt-gin-gonic
