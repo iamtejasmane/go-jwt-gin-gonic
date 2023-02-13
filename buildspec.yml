@@ -3,8 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-       - go build
+       - go build main.go
 artifacts:
   files:
-    - 'go-jwt-gin-gonic/**/*' 
-  base-directory: go-jwt-gin-gonic
+    - appspec.yml
+    - scripts/*
+    - main
