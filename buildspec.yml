@@ -1,6 +1,15 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      # install golang
+      - sudo apt update
+      - sudo apt install golang-go
+      - echo "export GOPATH=$HOME/go" >> ~/.profile
+      - echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
+      - source ~/.profile
+
   build:
     commands:
        - go build
